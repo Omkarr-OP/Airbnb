@@ -20,7 +20,7 @@
         opacity: 1;
         cursor: pointer;
       }
-      .filter.p{
+      .filter p{
         font-size: 0.8rem;
       }
       .tax-info{
@@ -109,7 +109,7 @@
     let taxSwitch = document.getElementById("flexSwitchCheckDefault");
     taxSwitch.addEventListener("click", ()=>{
       let taxInfo = document.getElementsByClassName("tax-info");
-      for(info of taxInfo){
+      for(let info of taxInfo){
         if(info.style.display != "inline"){
           info.style.display = "inline"
         }else{
