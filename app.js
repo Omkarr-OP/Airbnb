@@ -69,9 +69,6 @@ const sessionOptions = {
   },
 };
 
-app.get("/" ,(req,res) =>{
-  res.send("Hi, I am home route")
-})
 
 
 
@@ -105,6 +102,10 @@ app.use((req,res,next) =>{
 app.use("/listings",listingRouter)
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
+app.get("/" ,(req,res) =>{
+  res.redirect("/listings")
+})
+
 
 
 
